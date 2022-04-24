@@ -1,0 +1,17 @@
+<!doctype html>
+
+<title>URL Shortener</title>
+
+{% if invalid_url %}
+    <p style="color: red; font-weight: bold"> Invalid URL! </p>
+{% endif %}
+
+{% if url %}
+    <p> Shortened URL: {{url}}</p>
+{% endif %}
+
+<form action="/" method="POST">
+    <label for="long_url">Input URL:</label>
+    <input type="text" id="long_url" name="long_url"><br><br>
+    <input type="submit" value="Submit">
+</form>
